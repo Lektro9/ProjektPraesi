@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/sky.css">
+		<link rel="stylesheet" href="dist/custom.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -79,42 +80,267 @@
 					</section>
 				</section>
 
-				<!-- Problemdarstellung -->
+				<!-- Einleitung -->
 				<section>
-					<section>Slide 2</section>
-					<section>Slide 2.1</section>
-					<section>Slide 2.2</section>
+					Einleitung
+					<section>
+						<img width="400" data-src="./img/scooplogo.png">
+						<aside class="notes">
+							- erstellt und berät Kunden bei Erstellung von Software
+							- Fokus liegt auf OO-Software und Datenbanktechnologien
+							- in mehrere Städten vertreten: Hamburg, Köln, Bonn, Prag, Wiesbaden
+						</aside>
+					</section>
+					
 				</section>
 				
-				<!-- Zielzustand -->
+				<!-- Analyse und Planung -->
 				<section>
-					<section>Slide 3</section>
-					<section>Slide 3.1</section>
-					<section>Slide 3.2</section>
+					Analyse und Planung
+					<section data-auto-animate>
+						<img width="200" data-src="./img/Detox.png">
+						<aside class="notes">
+							- Detox
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<img width="100" data-src="./img/Detox.png">
+						<img width="150" data-src="./img/arrow.png">
+						<img width="200" data-src="./img/RNMobile.png">
+						<aside class="notes">
+							- App
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<h4 class="title">Soll-Zustand</h4>
+						<div class="container">
+							<img width="150" data-src="./img/Detox.png">
+							<img width="150" data-src="./img/arrow.png">
+							<img width="150" data-src="./img/RNMobile.png">
+							<img width="150" data-src="./img/arrow.png">
+							<img width="150" data-src="./img/Express.png">
+						</div>
+						<aside class="notes">
+							- Backend
+						</aside>
+					</section>
+					<section>
+						Vorgehensmodell?
+						<h3 class="fragment fade-in-then-out">Scrum?</h3>
+						<h3 class="fragment">Wasserfall! 🌊</h3>
+					</section>
+					<section data-auto-animate>
+						<h3>Kosten💰</h3>
+						<img width="750" data-src="./img/Projektkosten.png">
+					</section>
+					<section data-auto-animate>
+						<h3>Kosten💰</h3>
+						<img width="750" data-src="./img/fixingCostOld.png">
+					</section>
+					<section data-auto-animate>
+						<h3>Kosten💰</h3>
+						<img width="750" data-src="./img/fixingCostNew.png">
+					</section>
+					<section data-auto-animate>
+						<p>
+							\[\begin{aligned}
+							\frac{6080€ + 400€}{7200€} = 0,9\ Jahre
+							\end{aligned} \]
+						</p>
+					</section>
+					<section data-auto-animate>
+						<h3>Qualität 🧐</h3>
+						<img width="350" data-src="./img/manTests.png">
+						<aside class="notes">
+							- Manuelle Tests
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<h3>Qualität 🧐</h3>
+						<img width="750" data-src="./img/merkmale.png">
+						<aside class="notes">
+							- Norm ISO 9126 für Detox
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<h3>Qualität 🧐</h3>
+						<img width="750" data-src="./img/Risiken.png">
+						<aside class="notes">
+							- FMEA = Failure Mode and Effects Analysis
+							- nach ISO 14971
+						</aside>
+					</section>
 				</section>
 				
-				<!-- Vorgang -->
+				<!-- Entwurf -->
 				<section>
-					<section>Slide 4</section>
-					<section>Slide 4.1</section>
-					<section>Slide 4.2</section>
+					Entwurf
+					<section data-auto-animate>
+						<h3>Frontend 📱</h3>
+					</section>
+					<section data-auto-animate>
+						<h3>Frontend 📱</h3>
+						<img width="400" data-src="./img/activity.png">
+					</section>
+					<section data-auto-animate>
+						<h3>Backend 💻</h3>
+						<img width="400" data-src="./img/class.png">
+					</section>
+					<section data-auto-animate>
+						<h3>Tests 🧪</h3>
+					</section>
+					<section data-auto-animate>
+						<h3>Tests 🧪</h3>
+						<img width="750" data-src="./img/cartTests.png">
+						<aside class="notes">
+							- Beispiel: Detoxtests für Warenkorb
+						</aside>
+					</section>
+					<section>
+						<h3>Architektur 🏛</h3>
+						<img width="950" data-src="./img/architecture.png">
+					</section>
+				</section>
+
+				<!-- Umsetzung -->
+				<section>
+					Umsetzung
+					<section data-auto-animate>
+						<h3>Backend 💻</h3>
+					</section>
+					<section data-auto-animate>
+						<h3>Backend 💻</h3>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="1-6|3">import { Controller } from "./controller/Controller";
+
+const verwalter = new Controller();
+verwalter.useMiddleware();
+verwalter.createRoutes();
+verwalter.startWebserver();
+						</code></pre>
+					</section>
+					<section data-auto-animate>
+						<h3>Backend 💻</h3>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="3">const verwalter = new Controller();</code></pre>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers>constructor() {
+	this.app = express();
+	this.port = 3337;
+	this.apiPath = '/api';
+	this.users = [];
+	this.createOrderData();
+}
+						</code></pre>
+					</section>
+					<section data-auto-animate>
+						<h3>Backend 💻</h3>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="3">verwalter.useMiddleware();</code></pre>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers>public useMiddleware(): void {
+	const infoLogger = 
+	(req: Request, res: Response, next: NextFunction) 
+	=> {
+		console.log(`PrototypBackend: A ${req.method}
+		-request on ${req.path} was made by ${req.ip}`);
+		next();
+	};
+	this.app.use(infoLogger);
+	this.app.use(express.json());
+	this.app.use(cors());
+}
+						</code></pre>
+					</section>
+					<section data-auto-animate>
+						<h3>Backend 💻</h3>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="3">verwalter.createRoutes();</code></pre>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="2-7|7">public createRoutes(): void {
+  this.app.get(this.apiPath + '/createAnonUser', this.createAnonUser.bind(this));
+  this.app.get(this.apiPath + '/getUserDetails/:userId', this.getUserDetails.bind(this));
+  this.app.get(this.apiPath + '/getUserHistory/:userId', this.getUserHistory.bind(this));
+  this.app.put(this.apiPath + '/editUser/:userId', this.editUser.bind(this));
+  this.app.get(this.apiPath + '/getOrderItems', this.getOrderItems.bind(this));
+  this.app.post(this.apiPath + '/addPreorder', this.addPreorder.bind(this));
+}
+						</code></pre>
+					</section>
+					<section data-auto-animate>
+						<h3>Backend 💻</h3>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="3">this.app.post(this.apiPath + '/addPreorder', this.addPreorder.bind(this));</code></pre>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers>private addPreorder(req: Request, res: Response) {
+	let userId = req.body.userId;
+	let orderItems = req.body.orderItems;
+	let newOrder = 
+		new Order(
+			Math.floor(Math.random() * 10000), 
+			userId, 
+			orderItems
+		);
+	this.orders = [newOrder, ...this.orders]
+	res.status(204);
+	res.send('ok');
+}
+						</code></pre>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Frontend 📱</h3>
+						<pre data-id="code-animation"><code class="react" data-line-numbers="3,15|4,14|5,13|6,12|7-11"><script type="text/template">const App = () => {
+  return (
+    <SWRConfig value={{fetcher: fetcher}}>
+      <ShoppingCartProvider>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name="Home" component={MainMenu} options={{ title: "Hauptmenü" }} />
+            <Stack.Screen name="ShoppingCart" ... />
+            <Stack.Screen name="UserInfo" ... />
+            <Stack.Screen name="OrderHistory" ... />
+            <Stack.Screen name="EditUser" ... />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </ShoppingCartProvider>
+    </SWRConfig>
+  );
+};</script></code></pre>
+					</section>
+					<section data-auto-animate>
+						<img width="300" data-src="./img/edit.png">
+						<img width="300" data-src="./img/order.png">
+						<img width="300" data-src="./img/history.png">
+					</section>
+					<section data-auto-animate>
+						<h3>Tests 🧪</h3>
+					</section>
+					<section data-auto-animate>
+						<h3>Tests 🧪</h3>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers><script type="text/template">it('should add item to cart', async () => {
+  await expect(element(by.id('orderItemsModal'))).not.toBeVisible();
+  await element(by.id('addItem')).tap();
+  await expect(element(by.id('orderItemsModal'))).toBeVisible();
+  await element(by.text("Kreide")).tap();
+  await expect(element(by.id('chosenItem-2').withDescendant(by.text("Kreide")))).toBeVisible();
+});</script></code></pre>
+					<aside class="notes">
+						- AAA Pattern: Arrange, Act and Assert
+					</aside>
+					</section>
+					<section data-auto-animate>
+						<video data-autoplay width="250" src="./img/run.mp4"></video>
+					</section>
+					
 				</section>
 			</div>
 		</div>
 
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				autoPlayMedia: true,
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealHighlight, RevealNotes, RevealMath ]
 			});
 		</script>
 		<script src="socket.io/socket.io.js"></script>
