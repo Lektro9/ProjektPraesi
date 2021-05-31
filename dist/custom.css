@@ -3,3 +3,38 @@
     align-items: center;
     justify-content: center;
 }
+
+#customers .lastrow {
+    border-top: 2px solid black;
+}
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 16px;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:nth-child(odd){background-color: #ffffff;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #005994;
+    color: white;
+}
+
+.checkmark {
+    text-align: center !important; 
+    color: green;
+}

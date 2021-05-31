@@ -74,11 +74,47 @@
 				<section>
 					Einleitung
 					<section>
-						<img width="400" data-src="./img/scooplogo.png">
+						<img width="600" data-src="./img/scooplogo.png">
 						<aside class="notes">
 							- erstellt und berät Kunden bei Erstellung von Software
 							- Fokus liegt auf OO-Software und Datenbanktechnologien
 							- in mehrere Städten vertreten: Hamburg, Köln, Bonn, Prag, Wiesbaden
+						</aside>
+					</section>
+					<section>
+						<img width="800" data-src="./img/reactnative.png">
+						<aside class="notes">
+							- Appentwicklung
+							- Problem -> agile Arbeit
+						</aside>
+					</section>
+
+					<section>
+						<img width="1000" data-src="./img/pullrequests.png">
+						<aside class="notes">
+							- viele PRs, wenig Zeit zum Testen
+						</aside>
+					</section>
+
+					<section>
+						<h1>🪳</h1>
+						<aside class="notes">
+							- Bugs und Sideeffects
+						</aside>
+					</section>
+
+					<section>
+						<img width="200" data-src="./img/Detox.png">
+						<h2>Detox</h2>
+						<aside class="notes">
+							- Bugs und Sideeffects
+						</aside>
+					</section>
+
+					<section>
+						<video data-autoplay width="250" src="./img/run.mp4"></video>
+						<aside class="notes">
+							- Bugs und Sideeffects
 						</aside>
 					</section>
 					
@@ -114,6 +150,13 @@
 							- Backend
 						</aside>
 					</section>
+					<section data-auto-animate>
+						<h4 class="title">Soll-Zustand</h4>
+						<img width="950" data-src="./img/architecture.png">
+						<aside class="notes">
+							- Komplett
+						</aside>
+					</section>
 					<section>
 						Vorgehensmodell?
 						<h3 class="fragment fade-in-then-out">Scrum?</h3>
@@ -121,18 +164,58 @@
 					</section>
 					<section data-auto-animate>
 						<h3>Kosten💰</h3>
-						<img width="750" data-src="./img/Projektkosten.png">
+						<table id="customers">
+							<tr>
+							  <th>Name</th>
+							  <th>Position</th>
+							  <th>Verrechnungssatz</th>
+							  <th>Aufwand in Stunden</th>
+							  <th>Gesamtkosten</th>
+							</tr>
+							<tr>
+							  <td>Lars Kroll</td>
+							  <td>Projektleiter</td>
+							  <td>80,00€</td>
+							  <td>70</td>
+							  <td>5.600,00€</td>
+							</tr>
+							<tr>
+							  <td>Philipp Kursawe</td>
+							  <td>Fachbetreuer</td>
+							  <td>120,00€</td>
+							  <td>3</td>
+							  <td>360,00€</td>
+							</tr>
+							<tr>
+							  <td>Roland Scheel</td>
+							  <td>Auftraggeber</td>
+							  <td>120,00€</td>
+							  <td>1</td>
+							  <td>120,00€</td>
+							</tr>
+							<tr class="lastrow">
+							  <td colspan="4"><b>Projektkosten</b></td>
+							  <td><b>6.080,00€</b></td>
+							</tr>
+						  </table>
 					</section>
 					<section data-auto-animate>
 						<h3>Kosten💰</h3>
-						<img width="750" data-src="./img/fixingCostOld.png">
-					</section>
-					<section data-auto-animate>
-						<h3>Kosten💰</h3>
-						<img width="750" data-src="./img/fixingCostNew.png">
-					</section>
-					<section data-auto-animate>
-						<p>
+						<table>
+							<tr class="fragment">
+								<td>Projektkosten:</td>
+								<td>6.080,00€</td>
+							</tr>
+							<tr class="fragment">
+								<td>Integrationskosten:</td>
+								<td>400,00€</td>
+							</tr>
+							<tr class="fragment">
+								<td>Einsparungen im Jahr:</td>
+								<td>7200,00€</td>
+							</tr>
+						</table>
+						<p class="fragment">
 							\[\begin{aligned}
 							\frac{6080€ + 400€}{7200€} = 0,9\ Jahre
 							\end{aligned} \]
@@ -140,24 +223,61 @@
 					</section>
 					<section data-auto-animate>
 						<h3>Qualität 🧐</h3>
-						<img width="350" data-src="./img/manTests.png">
-						<aside class="notes">
-							- Manuelle Tests
-						</aside>
-					</section>
-					<section data-auto-animate>
-						<h3>Qualität 🧐</h3>
-						<img width="750" data-src="./img/merkmale.png">
+						<h3>ISO 9126</h3>
+						<table id="customers">
+							<tr>
+							  <th>Qualitätsmerkmal</th>
+							  <th>sehr wichtig</th>
+							  <th>wichtig</th>
+							  <th>weniger wichtig</th>
+							  <th>unwichtig</th>
+							</tr>
+							<tr>
+							  <td>Funktionalität</td>
+							  <td class="checkmark">✔</td>
+							  <td></td>
+							  <td></td>
+							  <td></td>
+							</tr>
+							<tr>
+							  <td>Zuverlässigkeit</td>
+							  <td class="checkmark">✔</td>
+							  <td></td>
+							  <td></td>
+							  <td></td>
+							</tr>
+							<tr>
+							  <td>Benutzbarkeit</td>
+							  <td></td>
+							  <td class="checkmark">✔</td>
+							  <td></td>
+							  <td></td>
+							</tr>
+							<tr>
+							  <td>Effizienz</td>
+							  <td></td>
+							  <td></td>
+							  <td class="checkmark">✔</td>
+							  <td></td>
+							</tr>
+							<tr>
+							  <td>Änderbarkeit</td>
+							  <td></td>
+							  <td class="checkmark">✔</td>
+							  <td></td>
+							  <td></td>
+							</tr>
+							<tr>
+							  <td>Übertragbarkeit</td>
+							  <td class="checkmark">✔</td>
+							  <td></td>
+							  <td></td>
+							  <td></td>
+							</tr>
+						  </table>
 						<aside class="notes">
 							- Norm ISO 9126 für Detox
-						</aside>
-					</section>
-					<section data-auto-animate>
-						<h3>Qualität 🧐</h3>
-						<img width="750" data-src="./img/Risiken.png">
-						<aside class="notes">
-							- FMEA = Failure Mode and Effects Analysis
-							- nach ISO 14971
+							- ISO 14971 und manuelle Tests
 						</aside>
 					</section>
 				</section>
@@ -167,28 +287,163 @@
 					Entwurf
 					<section data-auto-animate>
 						<h3>Frontend 📱</h3>
-					</section>
-					<section data-auto-animate>
-						<h3>Frontend 📱</h3>
-						<img width="400" data-src="./img/activity.png">
-					</section>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="751px"
+							height="451px" viewBox="-0.5 -0.5 751 451"
+							content="&lt;mxfile host=&quot;app.diagrams.net&quot; modified=&quot;2021-05-31T14:32:28.851Z&quot; agent=&quot;5.0 (Macintosh)&quot; etag=&quot;PeDItsUqYmcQKFu7BG8a&quot; version=&quot;14.7.2&quot;&gt;&lt;diagram id=&quot;6lfj_Gye714_Eknu9o44&quot; name=&quot;Page-1&quot;&gt;3Vhbb9owFP41eWQiNgntI7e2e5hUlWmlT5WbmMSaE2eOA8l+/Rxs5wqDIiHGnuLznUt8vvPFMlhwFuWPHCXhN+ZjaoGhn1twbgFgj4ArHyVSKGQMoQICTnwdVANL8htrcKjRjPg4bQUKxqggSRv0WBxjT7QwxDnbtsPWjLbfmqAA94Clh2gffSW+CDVqu/e14wmTINSvvgNj5YiQCdadpCHy2bYBwYUFZ5wxoVZRPsO0JM/wovIeDnirjXEci1MSpt8HE/uheJmuF4/L95fV1/fixwCoKhtEM92wBVwq603XTJaVuxaFpsL9lTHjGKS7QU1kAHSTvHbKVVA+n1CWiAjH1gxa05mpKTenyqogzUv1BsBZFvu43O9QurchEXiZIK/0bqW8JBaKiErLrrI3mAucH6TEroiWCsUswoIXMsQkOHo2WpzA1fa2HnWFhY0p21CDSMsrqGrXE5ALPYRPDOR+z0A6LAWSpuRg9/pDQB8mfPhZVtxRmxV7eCIrI+dSrMALyfS1JOUn4x/XU+hhFfQHdD1Zji40gGfO1oTeBvvmc7j+IeFc6tQmqWCc4JuaBwRXn4d7/NDGsT8pryPS8ihKU+JJSlKBuOjDDdIkMbxYaYJ3xltpfHGMOc+bznlhrJyIlakh128NvE4pDZOhdoz93nXolOHIVlnGPXz8piE7DvDf6sGjR5+zZ7YG45giQTbtHvbNW7/hmZHdB2MU2bkPjDuKUV3qpOZdq1PH7dQBnTqKhV6dnfiqps/X4/g29Kiy/nlFjq6pyEGlHaMl6JynyYHdqTTuFLqwKO9uQpT2TUjS+U8l2at0tialWf+0VuH1HxRw8Qc=&lt;/diagram&gt;&lt;/mxfile&gt;">
+												<defs />
+								<g>
+									<rect class="fragment" data-fragment-index="1" x="0" y="160" width="260" height="130" fill="#ffffff" stroke="#000000" pointer-events="all" />
+									<g class="fragment" data-fragment-index="1" transform="translate(-0.5 -0.5)">
+										<switch>
+											<foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%"
+												height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+												<div xmlns="http://www.w3.org/1999/xhtml"
+													style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 258px; height: 1px; padding-top: 225px; margin-left: 1px;">
+													<div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+														<div
+															style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+															<font style="font-size: 36px">Hauptmenü</font>
+														</div>
+													</div>
+												</div>
+											</foreignObject><text x="130" y="229" fill="#000000" font-family="Helvetica" font-size="12px"
+												text-anchor="middle">Hauptmenü</text>
+										</switch>
+									</g>
+									<rect class="fragment" data-fragment-index="2" x="490" y="0" width="260" height="130" fill="#ffffff" stroke="#000000" pointer-events="none" />
+									<g class="fragment" data-fragment-index="2" transform="translate(-0.5 -0.5)">
+										<switch>
+											<foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%"
+												height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+												<div xmlns="http://www.w3.org/1999/xhtml"
+													style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 258px; height: 1px; padding-top: 65px; margin-left: 491px;">
+													<div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+														<div
+															style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: none; white-space: normal; word-wrap: normal; ">
+															<font style="font-size: 36px">Warenkorb</font>
+														</div>
+													</div>
+												</div>
+											</foreignObject><text x="620" y="69" fill="#000000" font-family="Helvetica" font-size="12px"
+												text-anchor="middle">Warenkorb</text>
+										</switch>
+									</g>
+									<rect class="fragment" data-fragment-index="3" x="490" y="160" width="260" height="130" fill="#ffffff" stroke="#000000" pointer-events="none" />
+									<g class="fragment" data-fragment-index="3" transform="translate(-0.5 -0.5)">
+										<switch>
+											<foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%"
+												height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+												<div xmlns="http://www.w3.org/1999/xhtml"
+													style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 258px; height: 1px; padding-top: 225px; margin-left: 491px;">
+													<div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+														<div
+															style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: none; white-space: normal; word-wrap: normal; ">
+															<font style="font-size: 36px">Profil</font>
+														</div>
+													</div>
+												</div>
+											</foreignObject><text x="620" y="229" fill="#000000" font-family="Helvetica" font-size="12px"
+												text-anchor="middle">Profil</text>
+										</switch>
+									</g>
+									<rect class="fragment" data-fragment-index="4" x="490" y="320" width="260" height="130" fill="#ffffff" stroke="#000000" pointer-events="none" />
+									<g class="fragment" data-fragment-index="4" transform="translate(-0.5 -0.5)">
+										<switch>
+											<foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%"
+												height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+												<div xmlns="http://www.w3.org/1999/xhtml"
+													style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 258px; height: 1px; padding-top: 385px; margin-left: 491px;">
+													<div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+														<div
+															style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: none; white-space: normal; word-wrap: normal; ">
+															<font style="font-size: 36px">Historie</font>
+														</div>
+													</div>
+												</div>
+											</foreignObject><text x="620" y="389" fill="#000000" font-family="Helvetica" font-size="12px"
+												text-anchor="middle">Historie</text>
+										</switch>
+									</g>
+									<path class="fragment" data-fragment-index="2" d="M 265.89 157.57 L 484.11 67.43" fill="none" stroke="#000000" stroke-miterlimit="10"
+										pointer-events="none" />
+									<path class="fragment" data-fragment-index="2" d="M 261.03 159.57 L 266.17 153.67 L 265.89 157.57 L 268.84 160.14 Z" fill="#000000" stroke="#000000"
+										stroke-miterlimit="10" pointer-events="none" />
+									<path class="fragment" data-fragment-index="2" d="M 488.97 65.43 L 483.83 71.33 L 484.11 67.43 L 481.16 64.86 Z" fill="#000000" stroke="#000000"
+										stroke-miterlimit="10" pointer-events="none" />
+									<path class="fragment" data-fragment-index="2" d="M 266.37 225 L 483.63 225" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none" />
+									<path class="fragment" data-fragment-index="2" d="M 261.12 225 L 268.12 221.5 L 266.37 225 L 268.12 228.5 Z" fill="#000000" stroke="#000000"
+										stroke-miterlimit="10" pointer-events="none" />
+									<path class="fragment" data-fragment-index="2" d="M 488.88 225 L 481.88 228.5 L 483.63 225 L 481.88 221.5 Z" fill="#000000" stroke="#000000"
+										stroke-miterlimit="10" pointer-events="none" />
+									<path class="fragment" data-fragment-index="2" d="M 265.89 292.43 L 484.11 382.57" fill="none" stroke="#000000" stroke-miterlimit="10"
+										pointer-events="none" />
+									<path class="fragment" data-fragment-index="2" d="M 261.03 290.43 L 268.84 289.86 L 265.89 292.43 L 266.17 296.33 Z" fill="#000000" stroke="#000000"
+										stroke-miterlimit="10" pointer-events="none" />
+									<path class="fragment" data-fragment-index="2" d="M 488.97 384.57 L 481.16 385.14 L 484.11 382.57 L 483.83 378.67 Z" fill="#000000" stroke="#000000"
+										stroke-miterlimit="10" pointer-events="none" />
+								</g>
+								<switch>
+									<g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" /><a transform="translate(0,-5)"
+										xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank"><text
+											text-anchor="middle" font-size="10px" x="50%" y="100%">Viewer does not support full SVG 1.1</text></a>
+								</switch>
+							</svg>
+						</section>
 					<section data-auto-animate>
 						<h3>Backend 💻</h3>
-						<img width="400" data-src="./img/class.png">
+						<!-- <img width="400" data-src="./img/class.png"> -->
+						<img src="./img/klassendiagramm.svg" width="950"></img>
 					</section>
 					<section data-auto-animate>
 						<h3>Tests 🧪</h3>
 					</section>
 					<section data-auto-animate>
 						<h3>Tests 🧪</h3>
-						<img width="750" data-src="./img/cartTests.png">
+						<table id="customers">
+							<tr>
+							  <th>Nummer</th>
+							  <th>Testfall</th>
+							  <th>Beschreibung</th>
+							</tr>
+							<tr class="fragment" data-fragment-index="1">
+							  <td>1</td>
+							  <td>Artikel hinzufügen</td>
+							  <td>Fügt ein Artikel hinzu und zeigt diesen auf vorgesehen Screen an</td>
+							</tr>
+							<tr class="fragment" data-fragment-index="2">
+							  <td>2</td>
+							  <td>Artikel entfernen</td>
+							  <td>Entfernt Artikel und zeigt erwartetes Ergebnis im Warenkorb</td>
+							</tr>
+							<tr class="fragment" data-fragment-index="3">
+							  <td>3</td>
+							  <td>Bestellung abschicken</td>
+							  <td>Warenkorb als Bestellung
+								abschicken und eine Antwort abwarten</td>
+							</tr>
+							<tr class="fragment" data-fragment-index="3">
+							  <td>4</td>
+							  <td>Fehleranzeige</td>
+							  <td>Wenn ein Fehler autritt soll der Nutzer benachrichtigt werden und der Warenkorb bleibt erhalten</td>
+							</tr>
+							<tr class="fragment" data-fragment-index="3">
+							  <td>5</td>
+							  <td>Ladeindikator</td>
+							  <td>Bei längerer Bearbeitung einer Anfrage soll eine Ladeindikator ("Spinner") angezeigt werden</td>
+							</tr>
+							<tr class="fragment" data-fragment-index="3">
+							  <td>6</td>
+							  <td>Bestellhistorie anzeigen</td>
+							  <td>Nach einer Bestellung wird in der Bestellhistorie ein neuer Eintrag angezeigt</td>
+							</tr>
+						  </table>
 						<aside class="notes">
 							- Beispiel: Detoxtests für Warenkorb
 						</aside>
 					</section>
 					<section>
 						<h3>Architektur 🏛</h3>
-						<img width="950" data-src="./img/architecture.png">
+						<img width="950" data-src="./img/architekturmodell.png">
 					</section>
 				</section>
 
