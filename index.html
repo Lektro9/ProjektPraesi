@@ -20,10 +20,10 @@
 			<div class="slides">
 				<!-- Title -->
 				<section>
-					<section data-auto-animate>
+					<section data-visibility="uncounted" data-auto-animate>
 						<h2>End-to-End Tests</h2>
 					</section>
-					<section data-auto-animate>
+					<section data-visibility="uncounted" data-auto-animate>
 						<h2>End-to-End Tests</h2>
 						<h2>mit Detox</h2>
 					</section>
@@ -37,13 +37,13 @@
 							<li>Einleitung</li>
 						</ul>
 					</section>
-					<section data-auto-animate>
+					<section data-visibility="uncounted"data-auto-animate>
 						<ul>
 							<li>Einleitung</li>
 							<li>Analyse und Planung</li>
 						</ul>
 					</section>
-					<section data-auto-animate>
+					<section data-visibility="uncounted" data-auto-animate>
 						<ul>
 							<li>Einleitung</li>
 							<li>Analyse und Planung</li>
@@ -51,7 +51,7 @@
 						</ul>
 					</section>
 					
-					<section data-auto-animate>
+					<section data-visibility="uncounted" data-auto-animate>
 						<ul>
 							<li>Einleitung</li>
 							<li>Analyse und Planung</li>
@@ -59,7 +59,7 @@
 							<li>Umsetzung</li>
 						</ul>
 					</section>
-					<section data-auto-animate>
+					<section data-visibility="uncounted" data-auto-animate>
 						<ul>
 							<li>Einleitung</li>
 							<li>Analyse und Planung</li>
@@ -89,21 +89,21 @@
 						</aside>
 					</section>
 
-					<section>
+					<section data-visibility="uncounted">
 						<img width="1000" data-src="./img/pullrequests.png">
 						<aside class="notes">
 							- viele PRs, wenig Zeit zum Testen
 						</aside>
 					</section>
 
-					<section>
+					<section data-visibility="uncounted">
 						<h1>🪳</h1>
 						<aside class="notes">
 							- Bugs und Sideeffects
 						</aside>
 					</section>
 
-					<section>
+					<section data-visibility="uncounted">
 						<img width="200" data-src="./img/Detox.png">
 						<h2>Detox</h2>
 						<aside class="notes">
@@ -111,7 +111,7 @@
 						</aside>
 					</section>
 
-					<section>
+					<section data-visibility="uncounted">
 						<video data-autoplay width="250" src="./img/run.mp4"></video>
 						<aside class="notes">
 							- Bugs und Sideeffects
@@ -128,8 +128,8 @@
 						<aside class="notes">
 							- Detox
 						</aside>
-					</section>
-					<section data-auto-animate>
+					</section >
+					<section data-visibility="uncounted" data-auto-animate>
 						<img width="100" data-src="./img/Detox.png">
 						<img width="150" data-src="./img/arrow.png">
 						<img width="200" data-src="./img/RNMobile.png">
@@ -137,7 +137,7 @@
 							- App
 						</aside>
 					</section>
-					<section data-auto-animate>
+					<section data-visibility="uncounted" data-auto-animate>
 						<h4 class="title">Soll-Zustand</h4>
 						<div class="container">
 							<img width="150" data-src="./img/Detox.png">
@@ -150,7 +150,7 @@
 							- Backend
 						</aside>
 					</section>
-					<section data-auto-animate>
+					<section data-visibility="uncounted" data-auto-animate>
 						<h4 class="title">Soll-Zustand</h4>
 						<img width="950" data-src="./img/architecture.png">
 						<aside class="notes">
@@ -199,7 +199,7 @@
 							</tr>
 						  </table>
 					</section>
-					<section data-auto-animate>
+					<section data-visibility="uncounted" data-auto-animate>
 						<h3>Kosten💰</h3>
 						<table>
 							<tr class="fragment">
@@ -397,7 +397,7 @@
 					<section data-auto-animate>
 						<h3>Tests 🧪</h3>
 					</section>
-					<section data-auto-animate>
+					<section data-visibility="uncounted" data-auto-animate>
 						<h3>Tests 🧪</h3>
 						<table id="customers">
 							<tr>
@@ -451,122 +451,149 @@
 				<section>
 					Umsetzung
 					<section data-auto-animate>
-						<h3>Backend 💻</h3>
+						<img width="950" data-src="./img/architekturmodell.png">
+					</section>
+					<section data-visibility="uncounted" data-auto-animate>
+						<img width="950" data-src="./img/archPath.png">
 					</section>
 					<section data-auto-animate>
 						<h3>Backend 💻</h3>
-						<pre data-id="code-animation"><code class="javascript" data-line-numbers="1-6|3">import { Controller } from "./controller/Controller";
-
-const verwalter = new Controller();
-verwalter.useMiddleware();
-verwalter.createRoutes();
-verwalter.startWebserver();
-						</code></pre>
-					</section>
-					<section data-auto-animate>
-						<h3>Backend 💻</h3>
-						<pre data-id="code-animation"><code class="javascript" data-line-numbers="3">const verwalter = new Controller();</code></pre>
-						<pre data-id="code-animation"><code class="javascript" data-line-numbers>constructor() {
-	this.app = express();
-	this.port = 3337;
-	this.apiPath = '/api';
-	this.users = [];
-	this.createOrderData();
+						<pre data-id="code-animation"><code data-line-numbers="3">/getUserHistory/:userId</code></pre>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers>private getUserHistory(req: Request, res: Response) {
+							
 }
 						</code></pre>
 					</section>
-					<section data-auto-animate>
+					<section data-visibility="uncounted" data-auto-animate>
 						<h3>Backend 💻</h3>
-						<pre data-id="code-animation"><code class="javascript" data-line-numbers="3">verwalter.useMiddleware();</code></pre>
-						<pre data-id="code-animation"><code class="javascript" data-line-numbers>public useMiddleware(): void {
-	const infoLogger = 
-	(req: Request, res: Response, next: NextFunction) 
-	=> {
-		console.log(`PrototypBackend: A ${req.method}
-		-request on ${req.path} was made by ${req.ip}`);
-		next();
-	};
-	this.app.use(infoLogger);
-	this.app.use(express.json());
-	this.app.use(cors());
+						<pre data-id="code-animation"><code data-line-numbers>/getUserHistory/:userId</code></pre>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="2">private getUserHistory(req: Request, res: Response) {
+	let userId = req.params.userId
 }
 						</code></pre>
 					</section>
-					<section data-auto-animate>
+					<section data-visibility="uncounted" data-auto-animate>
 						<h3>Backend 💻</h3>
-						<pre data-id="code-animation"><code class="javascript" data-line-numbers="3">verwalter.createRoutes();</code></pre>
-						<pre data-id="code-animation"><code class="javascript" data-line-numbers="2-7|7">public createRoutes(): void {
-  this.app.get(this.apiPath + '/createAnonUser', this.createAnonUser.bind(this));
-  this.app.get(this.apiPath + '/getUserDetails/:userId', this.getUserDetails.bind(this));
-  this.app.get(this.apiPath + '/getUserHistory/:userId', this.getUserHistory.bind(this));
-  this.app.put(this.apiPath + '/editUser/:userId', this.editUser.bind(this));
-  this.app.get(this.apiPath + '/getOrderItems', this.getOrderItems.bind(this));
-  this.app.post(this.apiPath + '/addPreorder', this.addPreorder.bind(this));
+						<pre data-id="code-animation"><code data-line-numbers="3">/getUserHistory/:userId</code></pre>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="3-4">private getUserHistory(req: Request, res: Response) {
+	let userId = req.params.userId
+	let ordersFromUser = this.orders.filter((order) 
+		=> order.userId.toString() === userId)
 }
 						</code></pre>
 					</section>
-					<section data-auto-animate>
+					<section data-visibility="uncounted" data-auto-animate>
 						<h3>Backend 💻</h3>
-						<pre data-id="code-animation"><code class="javascript" data-line-numbers="3">this.app.post(this.apiPath + '/addPreorder', this.addPreorder.bind(this));</code></pre>
-						<pre data-id="code-animation"><code class="javascript" data-line-numbers>private addPreorder(req: Request, res: Response) {
-	let userId = req.body.userId;
-	let orderItems = req.body.orderItems;
-	let newOrder = 
-		new Order(
-			Math.floor(Math.random() * 10000), 
-			userId, 
-			orderItems
-		);
-	this.orders = [newOrder, ...this.orders]
-	res.status(204);
-	res.send('ok');
+						<pre data-id="code-animation"><code data-line-numbers="3">/getUserHistory/:userId</code></pre>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="5">private getUserHistory(req: Request, res: Response) {
+	let userId = req.params.userId
+	let ordersFromUser = this.orders.filter((order) 
+		=> order.userId.toString() === userId)
+	res.send(ordersFromUser);
 }
 						</code></pre>
 					</section>
-
+					<section data-visibility="uncounted" data-auto-animate>
+						<h3>Backend 💻</h3>
+						<pre data-id="code-animation"><code data-line-numbers="3">/getUserHistory/:userId</code></pre>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="5">private getUserHistory(req: Request, res: Response) {
+	let userId = req.params.userId
+	let ordersFromUser = this.orders.filter((order) 
+		=> order.userId.toString() === userId)
+	res.send(ordersFromUser);
+}
+						</code></pre>
+						<pre data-id="code-animation"><code class="text" data-line-numbers="3">GET http://localhost:3337/api/getUserHistory/1</code></pre>
+					</section>
 					<section data-auto-animate>
 						<h3>Frontend 📱</h3>
-						<pre data-id="code-animation"><code class="react" data-line-numbers="3,15|4,14|5,13|6,12|7-11"><script type="text/template">const App = () => {
-  return (
-    <SWRConfig value={{fetcher: fetcher}}>
-      <ShoppingCartProvider>
-        <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen name="Home" component={MainMenu} options={{ title: "Hauptmenü" }} />
-            <Stack.Screen name="ShoppingCart" ... />
-            <Stack.Screen name="UserInfo" ... />
-            <Stack.Screen name="OrderHistory" ... />
-            <Stack.Screen name="EditUser" ... />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </ShoppingCartProvider>
-    </SWRConfig>
-  );
-};</script></code></pre>
+					</section>
+					<section data-visibility="uncounted" data-auto-animate>
+						<h3>Frontend 📱</h3>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="3">const { orderList, error } 
+  = useSWR(BASE_URL + '/getUserHistory/' + userId)</code></pre>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers><script type="text/template"><FlatList
+
+/></script></code></pre>
+					</section>
+					<section data-visibility="uncounted" data-auto-animate>
+						<h3>Frontend 📱</h3>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="3">const { orderList, error } 
+  = useSWR(BASE_URL + '/getUserHistory/' + userId)</code></pre>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="2"><script type="text/template"><FlatList
+  data={orderList}
+/></script></code></pre>
+					</section>
+					<section data-visibility="uncounted" data-auto-animate>
+						<h3>Frontend 📱</h3>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="3">const { orderList, error } 
+  = useSWR(BASE_URL + '/getUserHistory/' + userId)</code></pre>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="3"><script type="text/template"><FlatList
+  data={orderList}
+  keyExtractor={(item) => item.id}
+/></script></code></pre>
+					</section>
+					<section data-visibility="uncounted" data-auto-animate>
+						<h3>Frontend 📱</h3>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="3">const { orderList, error } 
+  = useSWR(BASE_URL + '/getUserHistory/' + userId)</code></pre>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="4-7"><script type="text/template"><FlatList
+  data={orderList}
+  keyExtractor={(item) => item.id}
+  renderItem={({ item }) => (
+    <View testID="oldOrders">
+      <Text>Bestellnummer: {item.id}</Text>
+    </View>
+  )}
+/></script></code></pre>
 					</section>
 					<section data-auto-animate>
-						<img width="300" data-src="./img/edit.png">
-						<img width="300" data-src="./img/order.png">
 						<img width="300" data-src="./img/history.png">
+						<!-- TODO: Android screenshot -->
 					</section>
 					<section data-auto-animate>
 						<h3>Tests 🧪</h3>
 					</section>
-					<section data-auto-animate>
+					<section data-visibility="uncounted" data-auto-animate>
 						<h3>Tests 🧪</h3>
-						<pre data-id="code-animation"><code class="javascript" data-line-numbers><script type="text/template">it('should add item to cart', async () => {
-  await expect(element(by.id('orderItemsModal'))).not.toBeVisible();
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="2-3"><script type="text/template">it('should check if history shows last order', async () => {
   await element(by.id('addItem')).tap();
-  await expect(element(by.id('orderItemsModal'))).toBeVisible();
-  await element(by.text("Kreide")).tap();
-  await expect(element(by.id('chosenItem-2').withDescendant(by.text("Kreide")))).toBeVisible();
+  await element(by.text("Schokolade (200g)")).tap();
+});</script></code></pre>
+					<aside class="notes">
+						- AAA Pattern: Arrange, Act and Assert
+					</aside>
+					</section>
+					<section data-visibility="uncounted" data-auto-animate>
+						<h3>Tests 🧪</h3>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="4-5"><script type="text/template">it('should check if history shows last order', async () => {
+  await element(by.id('addItem')).tap();
+  await element(by.text("Schokolade (200g)")).tap();
+  await element(by.id('sendOrder')).tap();
+  await element(by.text('juhu!')).tap();
+});</script></code></pre>
+					<aside class="notes">
+						- AAA Pattern: Arrange, Act and Assert
+					</aside>
+					</section>
+					<section data-visibility="uncounted" data-auto-animate>
+						<h3>Tests 🧪</h3>
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="6-9"><script type="text/template">it('should check if history shows last order', async () => {
+  await element(by.id('addItem')).tap();
+  await element(by.text("Schokolade (200g)")).tap();
+  await element(by.id('sendOrder')).tap();
+  await element(by.text('juhu!')).tap();
+  await element(by.id('header-back')).atIndex(0).tap()
+  await element(by.id('history')).tap();
+  await expect(element(by.text("Schokolade (200g)"))
+    .atIndex(0)).toBeVisible();
 });</script></code></pre>
 					<aside class="notes">
 						- AAA Pattern: Arrange, Act and Assert
 					</aside>
 					</section>
 					<section data-auto-animate>
-						<video data-autoplay width="250" src="./img/run.mp4"></video>
+						<video class="myborder" data-autoplay=false width="250" src="./img/orderTest.mov"></video>
 					</section>
 					
 				</section>
@@ -574,12 +601,12 @@ verwalter.startWebserver();
 					Fazit 🏁
 					<section data-auto-animate>
 					</section>
-					<section data-auto-animate>
+					<section data-visibility="uncounted" data-auto-animate>
 						<ul>
 							<li>Detox ist geeignet</li>
 						</ul>
 					</section>
-					<section data-auto-animate>
+					<section data-visibility="uncounted" data-auto-animate>
 						<ul>
 							<li>Detox ist geeignet</li>
 							<li>DevOps Integrierung funktioniert</li>
@@ -588,7 +615,7 @@ verwalter.startWebserver();
 							- DevOps hat mehr Zeit in Anspruch genommen als erwartet
 						</aside>
 					</section>
-					<section data-auto-animate>
+					<section data-visibility="uncounted" data-auto-animate>
 						<ul>
 							<li>Detox ist geeignet</li>
 							<li>DevOps Integrierung funktioniert</li>
@@ -597,7 +624,7 @@ verwalter.startWebserver();
 					</section>
 					
 				</section>
-				<section>
+				<section data-visibility="uncounted">
 					<h3>Danke für die Aufmerksamkeit 👏</h3>
 				</section>
 			</div>
@@ -613,6 +640,7 @@ verwalter.startWebserver();
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+				slideNumber: 'c/t',
 				autoPlayMedia: true,
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealHighlight, RevealNotes, RevealMath ]
