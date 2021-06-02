@@ -548,8 +548,10 @@
 /></script></code></pre>
 					</section>
 					<section data-auto-animate>
-						<img width="300" data-src="./img/history.png">
-						<!-- TODO: Android screenshot -->
+						<div class="container">
+							<img width="300" data-src="./img/history.png">
+							<img width="270" data-src="./img/historyAndroid.png">
+						</div>
 					</section>
 					<section data-auto-animate>
 						<h3>Tests 🧪</h3>
@@ -599,9 +601,6 @@
 				</section>
 				<section>
 					Fazit 🏁
-					<section>
-						test
-					</section>
 					<section data-auto-animate>
 						<canvas data-chart="horizontalBar" height="500px">
 							<!--
@@ -624,7 +623,7 @@
 							-->
 						</canvas>
 					</section>
-					<section data-visibility="uncounted" data-auto-animate>
+					<section data-auto-animate>
 						<ul>
 							<li>Detox ist geeignet</li>
 						</ul>
@@ -672,7 +671,7 @@
 				chart: {
 					defaults: {
 						global: {
-							title: { fontColor: "black" },
+							title: { display: true, text: "Soll-Ist Vergleich", fontColor: "black", fontSize: 24 },
 							legend: {
 								position: "bottom",
 								labels: { fontColor: "black" },
