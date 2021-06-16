@@ -42,3 +42,8 @@
 .myborder {
     border: 3px solid black;
 }
+
+.reveal .slide-number {
+    font-size: 24pt;
+    color: #ffffff; 
+}

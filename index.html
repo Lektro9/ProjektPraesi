@@ -40,33 +40,6 @@
 					<section data-auto-animate>
 						<ul>
 							<li>Einleitung</li>
-						</ul>
-					</section>
-					<section data-visibility="uncounted"data-auto-animate>
-						<ul>
-							<li>Einleitung</li>
-							<li>Analyse und Planung</li>
-						</ul>
-					</section>
-					<section data-visibility="uncounted" data-auto-animate>
-						<ul>
-							<li>Einleitung</li>
-							<li>Analyse und Planung</li>
-							<li>Entwurf</li>
-						</ul>
-					</section>
-					
-					<section data-visibility="uncounted" data-auto-animate>
-						<ul>
-							<li>Einleitung</li>
-							<li>Analyse und Planung</li>
-							<li>Entwurf</li>
-							<li>Umsetzung</li>
-						</ul>
-					</section>
-					<section data-visibility="uncounted" data-auto-animate>
-						<ul>
-							<li>Einleitung</li>
 							<li>Analyse und Planung</li>
 							<li>Entwurf</li>
 							<li>Umsetzung</li>
@@ -139,7 +112,9 @@
 						<img width="150" data-src="./img/arrow.png">
 						<img width="200" data-src="./img/RNMobile.png">
 						<aside class="notes">
-							- App
+							- prototypische App
+							- selbst entwickelt
+							- soll Funktionen aus realer App reflektieren
 						</aside>
 					</section>
 					<section data-visibility="uncounted" data-auto-animate>
@@ -166,6 +141,10 @@
 						Vorgehensmodell?
 						<h3 class="fragment fade-in-then-out">Scrum?</h3>
 						<h3 class="fragment">Wasserfall! 🌊</h3>
+						<aside class="notes">
+							- scrum ist schwierig allein
+							- ziel und zeit stehen fest
+						</aside>
 					</section>
 					<section data-auto-animate>
 						<h3>Kosten💰</h3>
@@ -225,10 +204,13 @@
 							\frac{6080€ + 400€}{7200€} = 0,9\ Jahre
 							\end{aligned} \]
 						</p>
+						<aside class="notes">
+							- 7200 Euro entstanden aus: Fehlerbehebungskosten alt und neu
+							- (rule of ten - "six sigma" Vorgehensmodell des Qualitätsmanagements Motorola 1986)
+						</aside>
 					</section>
 					<section data-auto-animate>
 						<h3>Qualität 🧐</h3>
-						<h3>ISO 9126</h3>
 						<table id="customers">
 							<tr>
 							  <th>Qualitätsmerkmal</th>
@@ -282,7 +264,7 @@
 						  </table>
 						<aside class="notes">
 							- Norm ISO 9126 für Detox
-							- ISO 14971 und manuelle Tests
+							- ISO 14971 (Fehlermöglichkeits- und Einflussanalyse) und manuelle Tests
 						</aside>
 					</section>
 				</section>
@@ -456,11 +438,11 @@
 				<section>
 					Umsetzung
 					<section data-auto-animate>
-						<img width="950" data-src="./img/architekturmodell.png">
+						<img width="650" data-src="./img/beispielbackend.svg">
 					</section>
-					<section data-visibility="uncounted" data-auto-animate>
+					<!-- <section data-visibility="uncounted" data-auto-animate>
 						<img width="950" data-src="./img/archPath.png">
-					</section>
+					</section> -->
 					<section data-auto-animate>
 						<h3>Backend 💻</h3>
 						<pre data-id="code-animation"><code data-line-numbers="3">/getUserHistory/:userId</code></pre>
@@ -501,7 +483,7 @@
 					<section data-visibility="uncounted" data-auto-animate>
 						<h3>Backend 💻</h3>
 						<pre data-id="code-animation"><code data-line-numbers="3">/getUserHistory/:userId</code></pre>
-						<pre data-id="code-animation"><code class="javascript" data-line-numbers="5">private getUserHistory(req: Request, res: Response) {
+						<pre data-id="code-animation"><code class="javascript" data-line-numbers="1-6">private getUserHistory(req: Request, res: Response) {
 	let userId = req.params.userId
 	let ordersFromUser = this.orders.filter((order) 
 		=> order.userId.toString() === userId)
@@ -509,6 +491,12 @@
 }
 						</code></pre>
 						<pre data-id="code-animation"><code class="text" data-line-numbers="3">GET http://localhost:3337/api/getUserHistory/1</code></pre>
+					</section>
+					<section data-auto-animate>
+						<div class="container">
+							<img width="300" data-src="./img/history.png">
+							<img width="270" data-src="./img/historyAndroid.png">
+						</div>
 					</section>
 					<section data-auto-animate>
 						<h3>Frontend 📱</h3>
@@ -553,10 +541,7 @@
 /></script></code></pre>
 					</section>
 					<section data-auto-animate>
-						<div class="container">
-							<img width="300" data-src="./img/history.png">
-							<img width="270" data-src="./img/historyAndroid.png">
-						</div>
+						<video class="myborder" data-autoplay=false width="250" src="./img/orderTest.mov"></video>
 					</section>
 					<section data-auto-animate>
 						<h3>Tests 🧪</h3>
@@ -598,9 +583,6 @@
 					<aside class="notes">
 						- AAA Pattern: Arrange, Act and Assert
 					</aside>
-					</section>
-					<section data-auto-animate>
-						<video class="myborder" data-autoplay=false width="250" src="./img/orderTest.mov"></video>
 					</section>
 					
 				</section>
@@ -646,7 +628,7 @@
 						<ul>
 							<li>Detox ist geeignet</li>
 							<li>DevOps Integrierung funktioniert</li>
-							<li>Kollegen Einarbeitung erfolgt</li>
+							<li>Ausblick: Einarbeitung Detox</li>
 						</ul>
 					</section>
 					
@@ -672,11 +654,12 @@
 			Reveal.initialize({
 				hash: true,
 				slideNumber: 'c/t',
+				controls: false,
 				autoPlayMedia: true,
 				chart: {
 					defaults: {
 						global: {
-							title: { display: true, text: "Soll-Ist Vergleich", fontColor: "black", fontSize: 24 },
+							title: { display: true, text: "Soll-Ist Zeitvergleich", fontColor: "black", fontSize: 24 },
 							legend: {
 								position: "bottom",
 								labels: { fontColor: "black" },
